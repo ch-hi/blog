@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   # 記事の表示
   def show
+    @article = Article.find(params[:id])
   end
 
   # 記事の作成
