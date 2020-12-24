@@ -50,6 +50,12 @@ class ArticlesController < ApplicationController
 
   # 記事の削除
   def destroy
+    @article = Article.find(params[:id])
+
+    # 記事の削除
+    @article.destroy
+    # TOPページに遷移する
+    redirect_to articles_path    
   end
 
   # コントローラパラメータの定義
